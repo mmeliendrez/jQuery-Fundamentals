@@ -1,0 +1,211 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Index</title>
+    <style type="text/css">
+        .BlueDiv { background-color: Navy; color:White;width:200px;}
+        .RedDiv { background-color: Red; color:White; width:200px;}
+        .Highlight { background-color: Yellow;}
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+    <script src="/Scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-1.5.1-vsdoc.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            WireEvents();
+        });
+
+        function WireEvents() {
+
+            // Handle Click
+            $('#SubmitButton3').click(function () {
+                alert("Clicked button - the jQuery way!!");
+            });
+
+            $('#SubmitButton4').click(function () {
+                var firstName = $('#FirstNameTextBox1').val();
+                var lastName = $('#LastNameTextBox1').val();
+                $('#DivOutput').text(firstName + ' ' + lastName);
+            });
+
+            // Handle Mouse
+
+            $('#Div1').mouseenter(function () {
+                Toggle(this);
+                $(this).css('cursor', 'pointer');
+            })
+            .mouseleave(function () {
+                Toggle($(this));
+            });
+
+            $('#Div2').mousemove(function (e) {
+                $(this).text('X: ' + e.pageX + ' Y: ' + e.pageY);
+            })
+            .mouseup(function (e) {
+                alert($(e.target).attr('id'));
+            });
+
+            //Handle Select
+            $('#Select1').change(function () {
+                alert($(this).val());
+            });
+            
+        }
+
+        function SubmitButton_Click() {
+            alert("Clicked button - the traditional way");
+        }
+
+        function Toggle(div) {
+            $(div).toggleClass('Highlight');
+        }
+   </script>
+   <script type="text/javascript">
+       
+   </script>
+    
+</head>
+<body>
+    <h1>Handling Events with jQuery</h1>
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 1:</strong> handles button click event.</label><br /><br />
+        <label>- The old-fashioned way (adding Event Listener):</label><input id="SubmitButton1"type="button" value="Submit" /><br />
+        <label>- The traditional way (using onClick event):</label><input id="SubmitButton2" onclick="SubmitButton_Click()" type="button" value="Submit" /><br />
+        <label>- The traditional way (using jQuery):</label><input id="SubmitButton3" type="button" value="Submit" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 2:</strong> grabs first and last names when clicked SubmitButton4.</label><br /><br />
+        <table style="width:300px;">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox1" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox1" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="Rambo" type="text" /></td>
+            </tr>
+        </table>  
+        <label></label><input id="SubmitButton4"type="button" value="Submit" /><br />
+        <div id="DivOutput"></div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 3:</strong> highlights Div1 when mouse is above him.</label><br /><br />
+        <div id="Div1" title="Div1">
+            This is my div text
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 4:</strong> grabs the coordinates of the pointer when mouse moves above Div2, and shows the div id when mouse is clicked above Div2 (using event.target)</label><br /><br />
+        <div id="Div2" title="Div2">
+            Coordinates here...
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 5:</strong> grabs the selected value on Select1</label><br /><br />
+        <select id="Select1">
+                    <option value="AZ">AZ</option>
+                    <option value="CA" selected="true">CA</option>
+        </select>
+    </div><br />
+    <hr /><br />
+
+    <div id="TestDiv" title="Div title fdsfds sdfs">
+        This is my div text
+    </div>
+    <div id="OutputDiv"></div>
+    <div id="TableConatinerDiv" title="Contains Table">
+        <table id="DataTable">
+          <tr>
+             <td>Cell 1 Row 1</td>
+          </tr>
+          <tr>
+             <td>Cell 1 Row 2</td>
+          </tr>
+          <tr>
+             <td>Cell 1 Row 3</td>
+          </tr>
+          <tr>
+             <td>
+                <table style="width:100%">
+                    <tr>
+                        <td>Nested Table Cell and Row</td>
+                    </tr>
+                </table>
+             </td>
+          </tr>
+        </table>
+        <br />
+    </div>
+    <div class="BlueDiv">
+        <span>Blue div</span>
+    </div>
+    <br />
+    <span class="BlueDiv">this is my blue span</span>
+    <span class="Foo">Span 1</span>
+    <span class="Foo">Span 2</span>
+    <span id="Span3" class="Foo">Span 3</span>
+    <br />
+    <div class="RedDiv">
+        <span>Red div</span>
+    </div>
+    <p>
+        <img src="/Images/pluralsight.jpg" />
+    </p>
+
+    <form id="form1" runat="server">
+        <table style="width:300px;">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="Rambo" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
+            </tr>           
+            <tr>
+                <td>
+                <select id="sel">
+                    <option value="AZ">AZ</option>
+                    <option value="CA" selected="true">CA</option>
+                </select></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input id="SubmitButton" onclick="SubmitButton_Click()" type="button" value="Submit" /></td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>  
+
+    </form>
+    <script type="text/javascript">
+        // Handle Events the old-fashioned way
+        var button = document.getElementById('SubmitButton1');
+        if (document.addEventListener) {    // Does the document supports the addEventListener?
+            button.addEventListener('click', function () { alert('Clicked button - The old-fashioned way'); }, false);           // Adde addEventListener to the button for the click event
+
+        }
+        else { // Otherwise, how IE handles the event?
+            button.attachEvent('onclick', function () { alert('Clicked IE button - The old-fashioned way'); });
+
+        }
+    </script>
+</body>
+</html>
