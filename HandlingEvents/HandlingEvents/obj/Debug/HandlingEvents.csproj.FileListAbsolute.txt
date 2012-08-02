@@ -1,7 +1,0 @@
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\HandlingEvents\HandlingEvents\bin\HandlingEvents.dll
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\HandlingEvents\HandlingEvents\bin\HandlingEvents.pdb
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\HandlingEvents\HandlingEvents\bin\EntityFramework.dll
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\HandlingEvents\HandlingEvents\bin\EntityFramework.xml
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\HandlingEvents\HandlingEvents\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\HandlingEvents\HandlingEvents\obj\Debug\HandlingEvents.dll
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\HandlingEvents\HandlingEvents\obj\Debug\HandlingEvents.pdb

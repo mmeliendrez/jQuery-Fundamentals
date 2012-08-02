@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>jQuery Fundamentals</title>    
+    
+    <link href="Styles/styles-unit4.css" rel="stylesheet" type="text/css" />
+    
+    <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/exercises-unit4.js" type="text/javascript"></script> <!-- Include excercices library -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            WireEvents();   // Call method from excercices library
+        });
+    </script>
+   
+    
+</head>
+<body>
+    <h1>UNIT 4- Handling Events with jQuery</h1>
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 1:</strong> handles button click event.</label><br /><br />
+        <label>- The old-fashioned way (adding Event Listener):</label><input id="SubmitButton1"type="button" value="Submit" /><br />
+        <label>- The traditional way (using onClick event):</label><input id="SubmitButton2" onclick="SubmitButton_Click()" type="button" value="Submit" /><br />
+        <label>- The traditional way (using jQuery):</label><input id="SubmitButton3" type="button" value="Submit" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 2:</strong> grabs first and last names when clicked SubmitButton4.</label><br /><br />
+        <table style="width:300px;">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox1" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox1" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="Rambo" type="text" /></td>
+            </tr>
+        </table>  
+        <label></label><input id="SubmitButton4"type="button" value="Submit" /><br />
+        <div id="DivOutput"></div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 3:</strong> highlights Div1 when mouse is above him.</label><br /><br />
+        <div id="Div1" title="Div1">
+            This is my div text
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 4:</strong> grabs the coordinates of the pointer when mouse moves above Div2, and shows the div id when mouse is clicked above Div2 (using event.target)</label><br /><br />
+        <div id="Div2" title="Div2">
+            Coordinates here...
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 5:</strong> grabs the selected value on Select1</label><br /><br />
+        <select id="Select1">
+                    <option value="AZ">AZ</option>
+                    <option value="CA" selected="true">CA</option>
+        </select>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 6:</strong> grabs the value of the changed element and highlights the element (handling change event by class name, considering multiple elements)</label><br /><br />
+        <select id="Select2" class="MultipleElements">
+                    <option value="AZ">AZ</option>
+                    <option value="CA" selected="true">CA</option>
+        </select>
+        Last Name<input id="LastNameTextBox2" class="MultipleElements" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="Rambo" type="text" />
+    </div><br />
+    <hr /><br />
+    <h2>Using bind() and unbind()</h2>
+    <br />
+    <div>
+        <label><strong>Exercise 7:</strong> Simplifies Exercise 3 using bind() </label><br /><br />
+        <div id="Div3" title="Div3">
+            My text here...
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 8:</strong> Updates text only when "mouseup" event is fired, using bind() and managing actions based on event.type </label><br /><br />
+        <div id="Div4" title="Div4">
+            Coordinates here...
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 9:</strong> Takes off "mouseup" event when "Unbind Mouseup Event" button is clicked, using unbind('mouseup') </label><br /><br />
+        <div id="Div5" title="Div5">
+            Coordinates here...
+        </div>
+        <input id="SubmitButton5"type="button" value="Unbind Mouseup Event" />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 10:</strong> Takes off all events when "Unbind All Events" button is clicked, using unbind() </label><br /><br />
+        <div id="Div6" title="Div6">
+            Coordinates here...
+        </div>
+        <input id="SubmitButton6"type="button" value="Unbind All Events" />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 11:</strong> Wires "keypress" event using live() </label><br /><br />
+        <input type="button" id="AddPhone" value="Add Phone" />
+        <div id="PhonesDiv" style="margin-top:10px;">
+            <div class="PhoneTypeDiv">
+                <select id="Phone">
+                    <option value="">Select One</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Office">Office</option>
+                </select>
+            </div>
+            <div class="PhoneNumberDiv">
+                <input type="text" class="PhoneNumber" maxlength="12" />
+            </div>
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 12:</strong> Wires "keypress" event using delegate() </label><br /><br />
+        <input type="button" id="AddPhone2" value="Add Phone" />
+        <div id="PhonesDiv2" style="margin-top:10px;">
+            <div class="PhoneTypeDiv2">
+                <select id="Phone2">
+                    <option value="">Select One</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Office">Office</option>
+                </select>
+            </div>
+            <div class="PhoneNumberDiv2">
+                <input type="text" class="PhoneNumber2" maxlength="12" />
+            </div>
+        </div>
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 13:</strong>  Highlights table fields when mouse is up them, similar to exercise 8, but now using "hover" </label><br /><br />
+        <table id="tableExercise13" style="width:300px;">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox3" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox3" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="Rambo" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox3">TextArea</textarea></td>
+            </tr>           
+        </table>  
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 14:</strong>  Simplifies Exercise 13, using "hover" and toggleClass </label><br /><br />
+        <table id="tableExercise14" style="width:300px;">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox14" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox14" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="Rambo" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox14">TextArea</textarea></td>
+            </tr>           
+        </table>  
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 15:</strong>  Changes table fields css only when is clicked on them, using "toggle" </label><br /><br />
+        <table id="tableExercise15" style="width:300px;">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox15" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox15" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="Rambo" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox15">TextArea</textarea></td>
+            </tr>           
+        </table>  
+    </div>
+
+
+    <script type="text/javascript">
+        // Handle Events the old-fashioned way
+        var button = document.getElementById('SubmitButton1');
+        if (document.addEventListener) {    // Does the document supports the addEventListener?
+            button.addEventListener('click', function () { alert('Exercise 1: Clicked button - The old-fashioned way'); }, false);           // Adde addEventListener to the button for the click event
+
+        }
+        else { // Otherwise, how IE handles the event?
+            button.attachEvent('onclick', function () { alert('Exercise 1: Clicked IE button - The old-fashioned way'); });
+
+        }
+    </script>
+</body>
+</html>
