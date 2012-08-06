@@ -1,7 +1,0 @@
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\jQuerySelectors\jQuerySelectors\bin\jQuerySelectors.dll
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\jQuerySelectors\jQuerySelectors\bin\jQuerySelectors.pdb
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\jQuerySelectors\jQuerySelectors\bin\EntityFramework.dll
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\jQuerySelectors\jQuerySelectors\bin\EntityFramework.xml
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\jQuerySelectors\jQuerySelectors\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\jQuerySelectors\jQuerySelectors\obj\Debug\jQuerySelectors.dll
-C:\Users\mmeliendrez\Desktop\Capacitacion\jQuery Fundamentals\practica jquery\unit2\jQuerySelectors\jQuerySelectors\obj\Debug\jQuerySelectors.pdb

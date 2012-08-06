@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>jQuery Fundamentals</title>    
+    
+    <link href="Styles/styles-unit2.css" rel="stylesheet" type="text/css" />
+    
+    <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/exercises-unit2.js" type="text/javascript"></script> <!-- Include excercices library -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            WireEvents();   // Call method from excercices library
+        });
+    </script>
+   
+    
+</head>
+<body>
+    <h1>UNIT 2- jQuery Selectors</h1>
+    <hr /><br />
+    <div>
+        <h2>Selecting nodes by name</h2>   
+        <label><strong>Exercise 1: </strong> counts page images.</label><br /><br />
+         <p>
+            <img src="Images/pluralsight.jpg" alt="logo" />
+        </p>
+        <input id="Button1" onclick="Exercise1()" type="button" value="Count images" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 2: </strong> counts page divs.</label><br /><br />
+        <input id="Button2" onclick="Exercise2()" type="button" value="Count divs" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 3: </strong> changes divs style.</label><br /><br />
+        <input id="Button3" onclick="Exercise3()" type="button" value="Change styles" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 4: </strong> shows html of every div on the page.</label><br /><br />
+        <input id="Button4" onclick="Exercise4()" type="button" value="Show html" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 5: </strong> counts by Multiple elements.</label><br /><br />
+        <input id="Button5" onclick="Exercise5()" type="button" value="Count by multiple elements" /><br />
+    </div><br />
+    <hr /><br />
+
+    
+
+
+    
+</body>
+</html>
