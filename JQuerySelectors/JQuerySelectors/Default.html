@@ -9,19 +9,12 @@
     <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="Scripts/exercises-unit2.js" type="text/javascript"></script> <!-- Include excercices library -->
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            WireEvents();   // Call method from excercices library
-        });
-    </script>
-   
-    
 </head>
 <body>
     <h1>UNIT 2- jQuery Selectors</h1>
     <hr /><br />
     <div>
-        <h2>Selecting nodes by name</h2>   
+        <h2>Selecting nodes by Name</h2>   
         <label><strong>Exercise 1: </strong> counts page images.</label><br /><br />
          <p>
             <img src="Images/pluralsight.jpg" alt="logo" />
@@ -49,10 +42,284 @@
         <input id="Button5" onclick="Exercise5()" type="button" value="Count by multiple elements" /><br />
     </div><br />
     <hr /><br />
-
-    
-
-
-    
+    <div>
+        <h2>Selecting nodes by Id</h2>   
+        <label><strong>Exercise 6: </strong> selects div by id and shows the html of the particular item.</label><br /><br />
+        <div id="TestDivExercise6" title="Div Title Exercise 6">
+            This is my div text
+        </div>
+        <input id="Button6" onclick="Exercise6()" type="button" value="Show div's html" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 7: </strong> selects form by id and shows its html.</label><br /><br />
+        <form id="formExercise7" runat="server">
+            <table style="width:300px;">
+                <tr>
+                    <td style="width:30%;">First Name</td>
+                    <td style="width:70%;"><input id="FirstNameTextBox7" value="John" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input id="LastNameTextBox7" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>Comments</td>
+                    <td><textarea rows="5" cols="60" id="CommentsTextBox7">TextArea</textarea></td>
+                </tr>           
+            </table>  
+    </form>
+    <input id="Button7" onclick="Exercise7()" type="button" value="Show form's html" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <h2>Selecting nodes by Class Name</h2>   
+        <label><strong>Exercise 8: </strong> changes all the BlueDiv style.</label><br /><br />
+        <div class="BlueDiv">
+            <span>Blue div</span>
+        </div>
+        <br />
+        <span class="BlueDiv">This is my blue span</span>
+        <br />
+        <input id="Button8" onclick="Exercise8()" type="button" value="Change BlueDiv style" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 9: </strong> changes only divs with BlueDiv class.</label><br /><br />
+        <div class="BlueDiv">
+            <span>Blue div</span>
+        </div>
+        <br />
+        <span class="BlueDiv">This is my blue span</span>
+        <br />
+        <input id="Button9" onclick="Exercise9()" type="button" value="Change only div's BlueDiv style" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 10: </strong> changes only spans with BlueDiv class.</label><br /><br />
+        <div class="BlueDiv">
+            <span>Blue div</span>
+        </div>
+        <br />
+        <span class="BlueDiv">This is my blue span</span>
+        <br />
+        <input id="Button10" onclick="Exercise10()" type="button" value="Change only span's BlueDiv style" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 11: </strong> changes multiple class names.</label><br /><br />
+        <div class="RedDiv">
+            <span>Red div</span>
+        </div>
+        <input id="Button11" onclick="Exercise11()" type="button" value="Change Multiple Class Name" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 12: </strong> changes multiple class names, only focusing on divs.</label><br /><br />
+        <input id="Button12" onclick="Exercise12()" type="button" value="Change Multiple Class Name (only divs)" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <h2>Selecting nodes by Attribute Value</h2>   
+        <label><strong>Exercise 13: </strong> counts all divs that have a title attribute.</label><br /><br />
+        <input id="Button13" onclick="Exercise13()" type="button" value="Count Divs with title attribute" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 14: </strong> counts all divs that have a "Div Title" title attribute value.</label><br /><br />
+        <div id="DivExercise14" title="Div Title">
+            This is my div text
+        </div>
+        <input id="Button14" onclick="Exercise14()" type="button" value='Count Divs with title "Div Title"' /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 15: </strong> counts all divs that have a "div title" title attribute value, showing that selecting node by attribute value is case-sensitive.</label><br /><br />
+        <input id="Button15" onclick="Exercise15()" type="button" value='Count Divs with title "Div title"' /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 16: </strong> finds any input tag where type is "text".</label><br /><br />
+        <input id="Button16" onclick="Exercise16()" type="button" value='Count inputs with "text" type' /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 17: </strong> changes style of any input tag where type is "text".</label><br /><br />
+        <table style="width:300px;">
+                <tr>
+                    <td style="width:30%;">First Name</td>
+                    <td style="width:70%;"><input id="FirstNameText17" value="John" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input id="LastNameText17" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>Comments</td>
+                    <td><textarea rows="5" cols="60" id="Textarea17">TextArea</textarea></td>
+                </tr>           
+            </table>  
+        <input id="Button17" onclick="Exercise17()" type="button" value='Change style of inputs with "text" type' /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <h2>Selecting Input nodes</h2>   
+        <label><strong>Exercise 18: </strong> prints the value of the first input, using jQuery wrapper.</label><br /><br />
+        <input id="Button18" onclick="Exercise18()" type="button" value="Print first input" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 19: </strong> prints all input values.</label><br /><br />
+        <input id="Button19" onclick="Exercise19()" type="button" value="Print all inputs" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 20: </strong> changes all input values.</label><br /><br />
+        <input id="Button20" onclick="Exercise20()" type="button" value="Change all inputs" /><br />
+        <label>Click this button to RESET page: </label><input id="ButtonReset20" onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 21: </strong> prints all input values, only within forms (selecting input nodes, also by tag name).</label><br /><br />
+        <input id="Button21" onclick="Exercise21()" type="button" value="Print all inputs within forms" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 22: </strong> prints all input values, only within formExercise22 (selecting input nodes, also by id).</label><br /><br />
+        <form id="formExercise22" runat="server">
+            <table style="width:300px;">
+                <tr>
+                    <td style="width:70%;"><label>Here is the "formExercise22"</label><input id="Text22" value="Input Exercise 22" type="text" /></td>
+                </tr>
+            </table>  
+        </form>
+        <input id="Button22" onclick="Exercise22()" type="button" value="Print all inputs within formExercise22" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <h2>Using Additional Features</h2>   
+        <label><strong>Exercise 23: </strong> finds any div that contain the word "my div".</label><br /><br />
+        <input id="Button23" onclick="Exercise23()" type="button" value="Count divs" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 24: </strong> changes the style of tr odd elements.</label><br /><br />
+        <table style="width:300px;">
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+        </table>  
+        
+        <input id="Button24" onclick="Exercise24()" type="button" value="Change tr odd elements style" /><br />
+        <input id="ResetButton24" onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 25: </strong> changes the style of tr even elements.</label><br /><br />
+        <table style="width:300px;">
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+        </table>  
+        
+        <input id="Button25" onclick="Exercise25()" type="button" value="Change tr even elements style" /><br />
+        <input id="ResetButton25" onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 26: </strong> changes the style of first-child tr elements.</label><br /><br />
+        <input id="Button26" onclick="Exercise26()" type="button" value="Change first-child tr elements style" /><br />
+        <input id="ResetButton26" onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 27: </strong> changes the style of tr odd elements, only in DataTableExercise27 table (by id).</label><br /><br />
+        <table id="DataTableExercise27" style="width:300px;">
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+            <tr>
+                <td>ODD</td>
+            </tr>
+            <tr>
+                <td>EVEN</td>
+            </tr>
+        </table>  
+        <input id="Button27" onclick="Exercise27()" type="button" value="Change DataTableExercise27 tr elements style" /><br />
+        <input id="ResetButton27" onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 28: </strong> changes the style of any div where title attribute ends with "sdfs".</label><br /><br />
+        <div title="Div Title asdf asdfsdf sdfs">
+            This div has "Div Title asdf asdfsdf sdfs" title
+        </div>  
+        <input id="Button28" onclick="Exercise28()" type="button" value="Find Div" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 29: </strong> changes the style of any div where title attribute starts with "Div".</label><br /><br />
+        <div title="Div title asdf asdfsdf sdf">
+            This div has "Div title asdf asdfsdf sdf" title
+        </div>  
+        <input id="Button29" onclick="Exercise29()" type="button" value="Find Div" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 30: </strong> changes the style of any div where title attribute contains "Title".</label><br /><br />
+        <div title="Div Title asdf asdfsdf sdf">
+            This div has "Div Title asdf asdfsdf sdf" title
+        </div>  
+        <input id="Button30" onclick="Exercise30()" type="button" value="Find Div" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 31: </strong> Updates any div where title attribute contains "title".</label><br /><br />
+        <input id="Button31" onclick="Exercise31()" type="button" value="Find Div" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
 </body>
 </html>

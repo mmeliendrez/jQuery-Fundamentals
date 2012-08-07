@@ -78,5 +78,32 @@ function WireEvents() {
                 $('#OutputDivExercise9').html(cust.FirstName);
             }, 'json');
     });
+
+    /////////////// Using ajax() ///////////////
+
+    //Exercise 10: uses ajax()
+    $('#ButtonExercise10').click(function () {
+        // Creates a JSON object and converts it into string, and passes it up to the server
+        var customer = 'cust=' +
+        JSON.stringify(                           // Converts javascipt JSON object into string using json2.js
+        {
+        FirstName: $('#FirstNameTB').val(),
+        LastName: $('#LastNameTB').val()
+    });
+
+    $.ajax({
+        url: '../CustomerService.svc/InsertCustomer',
+        data: customer,
+        datatype: 'json',
+        success: function (data, status, xhr) {
+            $('#OutputDivExercise10').html('Insert status: ' +
+                                data.d.Status + ' <br />' +
+                                data.d.Message);
+        },
+        error: function (xhr, status, error) {
+            alert('Error ocurred: ' + status);
+        }
+    });
+});
 }
 
