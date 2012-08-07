@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>jQuery Fundamentals</title>    
+    
+    <link href="Styles/styles-unit2.css" rel="stylesheet" type="text/css" />
+    
+    <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/exercises-unit3.js" type="text/javascript"></script> <!-- Include excercices library -->
+
+</head>
+<body>
+    <h1>UNIT 3- Interacting With The DOM</h1>
+    <hr /><br />
+    <div>
+        <h2>Using .each()</h2>   
+        <label><strong>Exercise 1: </strong> updates OutputDivExercise1 with the text inside BlueDiv and RedDiv.</label><br /><br />
+        <div id="OutputDivExercise1"></div>
+        <div class="BlueDiv">
+            <span>Blue div (Exercise 1)</span>
+        </div>
+        <br />
+        <span class="BlueDiv">blue span (Exercise 1)</span>
+        <br />
+        <div class="RedDiv">
+            <span>Red div (Exercise 1)</span>
+        </div>
+        <input id="Button1" onclick="Exercise1()" type="button" value="Update OutputDivExercise1" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 2: </strong> updates OutputDivExercise1 with the text inside BlueDiv and RedDiv, in a more optimal way.</label><br /><br />
+        <div id="OutputDivExercise2"></div>
+        <div class="BlueDiv">
+            <span>Blue div (Exercise 2)</span>
+        </div>
+        <br />
+        <span class="BlueDiv">blue span (Exercise 2)</span>
+        <br />
+        <div class="RedDiv">
+            <span>Red div (Exercise 2)</span>
+        </div>
+        <input id="Button2" onclick="Exercise2()" type="button" value="Update OutputDivExercise2" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <h2>Modifying Properties and Attributes</h2>   
+        <label><strong>Exercise 3: </strong> updates the title of BlueDiv and RedDiv (IMPORTANT: hover above the divs (before and after change) to check the title).</label><br /><br />
+        <input id="Button3" onclick="Exercise3()" type="button" value="Update titles" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 4: </strong> changes the title of BlueDiv and RedDiv with .attr().</label><br /><br />
+        <input id="Button4" onclick="Exercise4()" type="button" value="Update titles" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 5: </strong> updates the style the divs, using css property.</label><br /><br />
+        <input id="Button5" onclick="Exercise5()" type="button" value="Update styles" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 6: </strong> updates several properties, using .attr() and JSON object.</label><br /><br />
+        <div class="BlueDiv">
+            <span>Blue div (Exercise 6)</span>
+        </div>
+        <br />
+        <div class="RedDiv">
+            <span>Red div (Exercise 6)</span>
+        </div>
+        <input id="Button6" onclick="Exercise6()" type="button" value="Update styles" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 7: </strong> updates several properties, chaining.</label><br /><br />
+        <input id="Button7" onclick="Exercise7()" type="button" value="Update styles" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <h2>Modifying The DOM</h2>   
+        <label><strong>Exercise 8: </strong> Inserts new nodes in DataTableExercise8 with .append(), .appendTo(), .prepend() and .prependTo().</label><br /><br />
+        <div id="TableConatinerDivExercise8" title="Contains Table">
+        <table id="DataTableExercise8">
+          <tr>
+             <td>Cell 1 Row 1</td>
+          </tr>
+          <tr>
+             <td>Cell 1 Row 2</td>
+          </tr>
+          <tr>
+             <td>Cell 1 Row 3</td>
+          </tr>
+          <tr>
+             <td>
+                <table style="width:100%">
+                    <tr>
+                        <td>Nested Table Cell and Row</td>
+                    </tr>
+                </table>
+             </td>
+          </tr>
+        </table>
+        <br />
+    </div>
+        <input id="Button8" onclick="Exercise8()" type="button" value="Insert new nodes" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 9: </strong> wraps span elements with "Foo" class within a div.</label><br /><br />
+        <div class="RedDiv">
+            <span class="Foo">Span with Foo class</span><br />
+            <span>Span without Foo class</span><br />
+        </div>
+        <input id="Button9" onclick="Exercise9()" type="button" value="Wrap spans" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 10: </strong> removes elements with "ParentWrapper" class.</label><br /><br />
+        <div class="RedDiv">
+            <span class="Foo">Span with Foo class</span><br />
+            <span>Span without Foo class</span><br />
+        </div>
+        <input id="Button10" onclick="Exercise10()" type="button" value="Remove wrapped spans" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 11: </strong> modifies style using .css() property an by passing a JSON object (modifying multiple styles).</label><br /><br />
+        <div class="BlueDiv">
+            <span>Blue div (Exercise 11)</span>
+        </div>
+        <br />
+        <div class="RedDiv">
+            <span>Red div (Exercise 11)</span>
+        </div>
+        <input id="Button11" onclick="Exercise11()" type="button" value="Update styles" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <h2>Modifying Classes</h2>   
+        <label><strong>Exercise 12: </strong> adds a CSS class.</label><br /><br />
+        <input type="text" value="Input to be updated" /><br />
+        <input id="Button12" onclick="Exercise12()" type="button" value="Add Class" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+    <div>
+        <label><strong>Exercise 13: </strong> removes the added CSS class.</label><br /><br />
+        <input id="InputTextExercise13" type="text" value="Input to be updated" /><br />
+        <input id="Button13" onclick="Exercise13()" type="button" value="Add and remove Class" /><br />
+        <input onclick="ReloadPage()" type="button" value="Reset" /><br />
+    </div><br />
+    <hr /><br />
+</body>
+</html>
