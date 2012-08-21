@@ -11,12 +11,12 @@ function Exercise1() {
 
 function Exercise2() {
     // Updates OutputDiv text inside BlueDiv and RedDiv, in a more optimal way
-    var html = '';
+    var html = [];
     $('div.BlueDiv, div.RedDiv').each(function (index) {
-        html += "<br />" + index + $(this).text();
+        html.push("<br />" + index + $(this).text());
     });
     var outputDiv = $('#OutputDivExercise2');
-    outputDiv.html(html)
+    outputDiv.html(html.join(''))
 }
 
 // MODIFYING PROPERTIES AND ATTRIBUTES **************************
